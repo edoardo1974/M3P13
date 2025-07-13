@@ -31,10 +31,18 @@ function imprimirLinks() {
         p.textContent = links[i];
         linkdotesto.appendChild(p);
     }
-    
-    /*links.forEach(link => {
-        const p = document.createElement("p");
-        p.textContent = link;
-        linkdotesto.appendChild(p);
-    });*/
 }   
+
+function imprimirpenúltimolink(){
+    encontrarLinksDeTexto();
+    const linkdotesto = document.getElementById("penultimolinkdotesto");
+    linkdotesto.innerHTML = "";
+
+    for (let i = 0; i < links.length; i++) {
+        const p = document.createElement("p");
+        p.textContent = links[i];
+        linkdotesto.appendChild(p);
+    }
+
+
+    } 
