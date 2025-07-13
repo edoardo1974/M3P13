@@ -1,27 +1,40 @@
-function encontrarLinksDeTexto() {
-    const parrafos = document.querySelectorAll("p");
-    const links = [];
-    parrafos.forEach(parrafo => {
-        const anclas = parrafo.getElementsByTagName("a");
+
+var parrafos;
+var links;
+
+function parrafo(parrafoSingolo) {
+    const anclas = parrafoSingolo.getElementsByTagName("a");
         for (let i = 0; i < anclas.length; i++) {
+            //console.log(anclas[i].href);
             links.push(anclas[i].href);
         }
-    });
-    return links;
-}
-
-console.log(encontrarLinksDeTexto());
-
-function contarLinksPorParrafo() {
-    const parrafos = document.querySelectorAll("p");
-    const links = [];
-
         
 }
 
-function parrafo(parrafo) {
-    const anclas = parrafo.getElementsByTagName("a");
-        for (let i = 0; i < anclas.length; i++) {
-            links.push(anclas[i].href);
-        }
+function encontrarLinksDeTexto() {
+    parrafos = document.querySelectorAll("p");
+    //console.log(parrafos);
+    links = [];
+    
+    parrafos.forEach(parrafo);
+    return links;
 }
+
+//console.log(encontrarLinksDeTexto());
+function imprimirLinks() {
+    encontrarLinksDeTexto();
+    const linkdotesto = document.getElementById("linkdotesto");
+    linkdotesto.innerHTML = "";
+
+    for (let i = 0; i < links.length; i++) {
+        const p = document.createElement("p");
+        p.textContent = links[i];
+        linkdotesto.appendChild(p);
+    }
+    
+    /*links.forEach(link => {
+        const p = document.createElement("p");
+        p.textContent = link;
+        linkdotesto.appendChild(p);
+    });*/
+}   
