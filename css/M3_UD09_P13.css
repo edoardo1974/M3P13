@@ -1,27 +1,48 @@
+/* 
+    Styles all <div> elements with the following properties:
+    - Adds a left and right margin of 10% of the container's width, centering the div horizontally.
+    - Adds a top margin of 50px to create vertical spacing above the div.
+*/
 div{
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 50px;
 }
+/* 
+    Styles the <header> element by adding horizontal margins.
+*/
 header{
     margin-left: 10%;
     margin-right: 10%;
 }
+/* 
+    Styles for all <h2> elements.
+*/
 h2{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20;
     font-style: italic;
 }
+/* 
+    Styles all <p> (paragraph) elements.
+*/
 p{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14;   
 }
+/* 
+    Styles all anchor (<a>) elements.
+*/
 a{
     color: blueviolet;
     font-style: bold;
 
 }
 
+/* 
+    Styles the element with the ID 'first_button' by adding a top margin of 20px.
+    This creates space above the button, separating it from elements above.
+*/
 #first_button{
     margin-top: 20px;
 }
